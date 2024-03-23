@@ -49,7 +49,7 @@ songs.forEach(i_song => {
 const doodleButtons = document.querySelectorAll('#songButton');
 doodleButtons.forEach(doodle => {
     doodle.addEventListener('click', function() {
-        const song = this.getAttribute('song-name');
+        const song = this.getAttribute('title');
         if (song) {
             
             const sectionBirthdate = document.querySelector('.section-birthdate');
