@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Song Generator</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main>  
+
+    <audio id="apparat-audio" src="audio/m4t.mp3" type="audio/mpeg"></audio>
+    <audio id="koktu-audio" src="audio/koktu.mp3" type="audio/mpeg"></audio>
+    <audio id="na-zapade-audio" src="audio/dequine.mp3" type="audio/mpeg"></audio>
+    <audio id="shyraylim-audio" src="audio/djuzz.mp3" type="audio/mpeg"></audio>
+    <audio id="do-konsa-audio" src="audio/skryp.mp3" type="audio/mpeg"></audio>
+    <audio id="osoba-audio" src="audio/hiro.mp3" type="audio/mpeg"></audio>
+    <audio id="eighteen-audio" src="audio/eighteen.mp3" type="audio/mpeg"></audio>
+    <audio id="jiber-audio" src="audio/jiber.mp3" type="audio/mpeg"></audio>
+    <audio id="safari-audio" src="audio/104.mp3" type="audio/mpeg"></audio>
+    <audio id="tsu-audio" src="audio/ayau.mp3" type="audio/mpeg"></audio>
+    <audio id="zaneslo-audio" src="audio/zaneslo.mp3" type="audio/mpeg"></audio>
+    <audio id="soseni-audio" src="audio/aro.mp3" type="audio/mpeg"></audio>
+
+    <div class="section-birthdate"> 
+      <div class="date">
+        <h3>CHOOSE THE SONG <span>or let us choose for you!</span></h3>
+          <form id="birthdayForm">
+              <div class="input">
+                  <input type="date" id="birthday" required>
+              </div>
+              <div class="input">
+                  <button type="submit">></button>
+              </div>
+          </form>
+      </div>
+    </div>
+
+    <div class="doodles">
+        <button class="btn-pic tsu" id="songButton" song-name="tsu">
+          <img class="pic" src="doodles/tsu.png">
+        </button>
+        <button class="btn-pic safari" id="songButton" song-name="safari">
+          <img class="pic" src="doodles/safari.png">
+        </button>
+        <button class="btn-pic shyraylim" id="songButton" song-name="shyraylim">
+          <img class="pic" src="doodles/shyraylim.png">
+        </button>
+        <button class="btn-pic na-zapade" id="songButton" song-name="na-zapade">
+          <img class="pic" src="doodles/na-zapade.png">
+        </button>
+        <button class="btn-pic jiber" id="songButton" song-name="jiber">
+          <img class="pic" src="doodles/jiber.png">
+        </button>
+        <button class="btn-pic eighteen" id="songButton" song-name="eighteen">
+          <img class="pic" src="doodles/eighteen.png">
+        </button>
+        <button class="btn-pic apparat" id="songButton" song-name="apparat">
+          <img class="pic" src="doodles/apparat.png">
+        </button>
+        <button class="btn-pic koktu" id="songButton" song-name="koktu">
+          <img class="pic" src="doodles/koktu.png">
+        </button>
+        <button class="btn-pic osoba" id="songButton" song-name="osoba">
+          <img class="pic" src="doodles/osoba.png">
+        </button>
+        <button class="btn-pic do-konsa" id="songButton" song-name="do-konsa">
+          <img class="pic" src="doodles/do-konsa.png">
+        </button>
+        <button class="btn-pic soseni" id="songButton" song-name="soseni">
+          <img class="pic" src="doodles/soseni.png">
+        </button>
+        <button class="btn-pic zaneslo" id="songButton" song-name="zaneslo">
+          <img class="pic" src="doodles/zaneslo.png">
+    </div>
+
+    <div class="song eighteen">
+      <div class="image">
+        <img src="song-picture/mdee.png" alt="Song Picture">
+      </div>
+
+      <div class="song-info">
+        <h1>M’dee, Dequine - 18</h1>
+      </div>
+
+      <div class="text-container">
+        <div class="text">
+          <p>You are the nurturing soul, guided by your empathy and intuition. Your compassion knows no bounds, and you fiercely protect those you love with unwavering devotion.</p><br>
+          <p>Embrace your sensitivity as your greatest strength, for "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart." - Helen Keller</p>
+        </div>
+      </div>
+      <div class="home-btn">
+        <button id="home-page" onclick="goHome()">Home</button>
+      </div>
+    </div>
+
+    <div class="song apparat">
+      <div class="image">
+        <img src="song-picture/m4t.png" alt="Song Picture">
+      </div>
+
+      <div class="song-info">
+        <h1>maslo chernogo tmina - аппарат президента 2</h1>
+      </div>
+
+      <div class="text-container">
+        <div class="text">
+          <p>You are the ambitious achiever, driven by your determination and sense of responsibility. Your resilience in the face of adversity is unmatched, and you tirelessly work towards your goals with unwavering focus.</p><br>
+          <p>Trust in your ability to overcome any obstacle, for "The future belongs to those who believe in the beauty of their dreams." - Eleanor Roosevelt</p>
+        </div>
+      </div>
+      <div class="home-btn">
+        <button id="home-page" onclick="goHome()">Home</button>
+      </div>
+    </div>
+
+    <div class="song do-konsa">
+      <div class="image">
+        <img src="song-picture/skrip.png" alt="Song Picture">
+      </div>
+
+      <div class="song-info">
+        <h1>Skryptonite, Ulukmanapo - До конца</h1>
+      </div>
+
+      <div class="text-container">
+        <div class="text">
+          <p>You are a meticulous perfectionist, blessed with keen analytical skills and attention to detail. Your dedication to excellence is unmatched, and you approach every task with precision and grace.</p><br>
+          <p>Trust in your ability to achieve greatness, for "Excellence is not an act, but a habit." - Aristotle</p>
+        </div>
+      </div>
+      <div class="home-btn">
+        <button id="home-page" onclick="goHome()">Home</button>
+      </div>
+    </div>
+
+    <div class="song jiber">
+      <div class="image">
+        <img src="song-picture/puza.png" alt="Song Picture">
+      </div>
+
+      <div class="song-info">
+        <h1>DJ Puza, Mira De Leon - Jiber</h1>
+      </div>
+
+      <div class="text-container">
+        <div class="text">
+          <p>You are the versatile communicator, blessed with wit and intellect. Your curiosity knows no bounds, and you thrive in diverse environments, constantly seeking new experiences and knowledge.</p><br>
+          <p>Embrace your adaptability, for "The only way to make sense out of change is to plunge into it, move with it, and join the dance." - Alan Watts</p>
+        </div>
+      </div>
+      <div class="home-btn">
+        <button id="home-page" onclick="goHome()">Home</button>
+      </div>
+    </div>
+
+    <div class="song koktu">
+      <div class="image">
+        <img src="song-picture/ik.png" alt="Song Picture">
+      </div>
+
+      <div class="song-info">
+        <h1>Irina Kairatovna - Kok tu</h1>
+      </div>
+
+      <div class="text-container">
+        <div class="text">
+          <p>You are the adventurous explorer, fueled by your boundless optimism and thirst for freedom. Your love for adventure knows no bounds, and you fearlessly embark on new journeys with an open heart and mind.</p><br>
+          <p>Embrace the unknown, for "Life begins at the end of your comfort zone." - Neale Donald Walsch</p>
+        </div>
+      </div>
+      <div class="home-btn">
+        <button id="home-page" onclick="goHome()">Home</button>
+      </div>
+    </div>
+
+    <div class="song na-zapade">
+      <div class="image">
+        <img src="song-picture/dequine.png" alt="Song Picture">
+      </div>
+
+      <div class="song-info">
+        <h1>Dequine - На западе</h1>
+      </div>
+
+      <div class="text-container">
+        <div class="text">
+          <p>You are the passionate powerhouse, driven by your intensity and depth of emotion. Your magnetic allure captivates those around you, and you fearlessly delve into the depths of the unknown with unwavering courage.</p><br>
+          <p>Remember, "The only way to do great work is to love what you do." - Steve Jobs</p>
+        </div>
+      </div>
+      <div class="home-btn">
+        <button id="home-page" onclick="goHome()">Home</button>
+      </div>
+    </div>
+
+    <div class="song osoba">
+      <div class="image">
+        <img src="song-picture/hiro.png" alt="Song Picture">
+      </div>
+
+      <div class="song-info">
+        <h1>Hiro - Особа крутая</h1>
+      </div>
+
+      <div class="text-container">
+        <div class="text">
+          <p>You are the radiant leader, exuding confidence and charisma wherever you go. Your passion ignites the flames of inspiration in those around you, and you fearlessly pursue your dreams with unyielding determination.</p><br>
+          <p>Remember, "Believe you can and you're halfway there." - Theodore Roosevelt</p>
+        </div>
+      </div>
+      <div class="home-btn">
+        <button id="home-page" onclick="goHome()">Home</button>
+      </div>
+    </div>
+
+    <div class="song safari">
+      <div class="image">
+        <img src="song-picture/104.png" alt="Song Picture">
+      </div>
+
+      <div class="song-info">
+        <h1>104, Truwer - Сафари</h1>
+      </div>
+
+      <div class="text-container">
+        <div class="text">
+          <p>You are the epitome of strength and stability, grounded in your unwavering determination and practicality. Your steadfast nature ensures that you persevere through any challenge with resilience and grace.</p><br>
+          <p>Trust in your ability to endure, for "Strength does not come from physical capacity. It comes from an indomitable will." - Mahatma Gandhi</p>
+        </div>
+      </div>
+      <div class="home-btn">
+        <button id="home-page" onclick="goHome()">Home</button>
+      </div>
+    </div>
+
+    <div class="song shyraylim">
+      <div class="image">
+        <img src="song-picture/djuzz.png" alt="Song Picture">
+      </div>
+
+      <div class="song-info">
+        <h1>Darkhan Juzz - Shyrailym</h1>
+      </div>
+
+      <div class="text-container">
+        <div class="text">
+          <p>You are the harmonious diplomat, guided by your sense of fairness and justice. Your charm and grace light up any room, and you effortlessly bring balance to the world around you.</p><br>
+          <p>Embrace your ability to see both sides of every situation, for "In diversity, there is beauty and there is strength." - Maya Angelou</p>
+        </div>
+      </div>
+      <div class="home-btn">
+        <button id="home-page" onclick="goHome()">Home</button>
+      </div>
+    </div>
+
+    <div class="song soseni">
+      <div class="image">
+        <img src="song-picture/aro.png" alt="Song Picture">
+      </div>
+
+      <div class="song-info">
+        <h1>ARO - S.O.Seni</h1>
+      </div>
+
+      <div class="text-container">
+        <div class="text">
+          <p>You are the visionary innovator, guided by your progressive ideals and humanitarian spirit. Your intellect and originality inspire those around you to think outside the box and create positive change in the world.</p><br>
+          <p>Embrace your uniqueness, for "In a world where you can be anything, be yourself."</p>
+        </div>
+      </div>
+      <div class="home-btn">
+        <button id="home-page" onclick="goHome()">Home</button>
+      </div>
+    </div>
+
+    <div class="song tsu">
+      <div class="image">
+        <img src="song-picture/ayau.png" alt="Song Picture">
+      </div>
+
+      <div class="song-info">
+        <h1>AYAU - T.S.U (TEK SEN USHIN)</h1>
+      </div>
+
+      <div class="text-container">
+        <div class="text">
+          <p>You are the fiery trailblazer, filled with passion and drive. Your adventurous spirit knows no bounds, and you fearlessly pursue your goals with unwavering determination. Your courage inspires those around you to push their limits and reach for the stars.</p><br>
+          <p>Remember, "Success is not final, failure is not fatal: It is the courage to continue that counts." - Winston Churchill</p>
+        </div>
+      </div>
+      <div class="home-btn">
+        <button id="home-page" onclick="goHome()">Home</button>
+      </div>
+      
+    </div>
+
+    <div class="song zaneslo">
+      <div class="image">
+        <img src="song-picture/armich.png" alt="Song Picture">
+      </div>
+
+      <div class="song-info">
+        <h1>Armich - zaneslo</h1>
+      </div>
+
+      <div class="text-container">
+        <div class="text">
+          <p>You are the dreamy empath, blessed with boundless creativity and compassion. Your intuitive nature allows you to connect deeply with others and see the beauty in the world around you.</p><br>
+          <p>Trust in the power of your imagination, for "The only limit to our realization of tomorrow will be our doubts of today." - Franklin D. Roosevelt</p>
+        </div>
+      </div>
+      <div class="home-btn">
+        <button id="home-page" onclick="goHome()">Home</button>
+      </div>
+      
+    </div>
+    
+    <div>
+      <img class="help" onclick="helpButton()" src="help.png" alt="Help icon">
+      <span class="help-text" id="help-button">
+          <ol>
+              <li>To start, input your birthdate.</li>
+              <li>Return to Home page using "Home" button</li>
+              <li>Close the message by clicking the help button and proceed</p></li>
+          </ol>
+          
+      </span>
+    </div>
+
+  </main>
+  <script src="js/java.js"></script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+@import url('https://fonts.cdnfonts.com/css/gt-eesti-display-trial');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  --background: #F5F5DC;
+  --text: #FFFFFF;
+  background-color: var(--background);
+}
+
+
+main {
+  display: block;
+}
+
+h3 {
+  display: flex;
+  flex-direction: column;
+  font-family: 'GT Eesti Display Trial', sans-serif;
+  color: black;
+}
+
+.section-birthdate {
+  position: absolute;
+  margin-left: 250px;
+  top: 32vw;
+}
+
+.date {
+  position: relative;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.input button {
+  position: relative;
+  background-color: #D8CBF8;
+  text-align: center;
+  font-size: 1.1vw;
+  width: 2vw;
+  height: 2vw;
+  border-radius: 50vw;
+  border: 1;
+  border-color: #6340B9;
+  color: #6340B9;
+  font-family: 'GT Eesti Display Trial', sans-serif;
+  font-weight: 600;
+}
+
+.input button:hover {
+  background-color: var(--background);
+  color: #D8CBF8;
+  filter: drop-shadow(0 0 .5vw #FFFFFF);
+}
+
+input[type="date"] {
+  font-family: 'GT Eesti Display Trial', sans-serif;
+  font-size: 1vw;
+  border-radius: 50vw;
+  border: 1;
+  padding: 0.5vw;
+}
+
+.input {
+  display: inline;
+}
+
+.home-btn button {
+  position: relative;
+  background-color: #D8CBF8;
+  text-align: center;
+  font-size: 1.1vw;
+  width: 5vw;
+  height: 3vw;
+  border-radius: 50vw;
+  border: 1;
+  border-color: #6340B9;
+  color: #6340B9;
+  font-family: 'GT Eesti Display Trial', sans-serif;
+  font-weight: 600;
+}
+
+.home-btn button:hover {
+    background-color: var(--background);
+    color: #D8CBF8;
+    filter: drop-shadow(0 0 .5vw #FFFFFF);
+}
+
+.btn-pic {
+  background: none;
+  border: none;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  width: 50%;
+  height: 50%;
+}
+
+.doodles {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(3, 33%);
+  width: 120rem;
+  height: 60rem;
+  gap: 5px;   
+}
+
+.song {
+  max-width: 100%;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.image {
+  max-width: 100%;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.song-info {
+  color: #420076;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  font-family: 'GT Eesti Display Trial', sans-serif;
+}
+
+.text-container {
+  background-color: #F6F7ED;
+  border-radius: 30px;
+}
+
+.text {
+  color: black;
+  font-size: clamp(16px, 4vw, 24px);
+  padding: 30px;
+}
+
+.text p {
+  margin-bottom: 10px;
+  font-family: 'GT Eesti Display Trial', sans-serif;
+}
+
+.home-btn {
+  position: absolute;
+  left: 50%;
+  top: 120%;
+  transform: translate(-50%, -50%);
+}
+
+
+.help {
+  position: absolute;
+  top: 13vw;
+  right: 7vw;
+  width: 5vw;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.help-text {
+  display: none;
+  font-family: 'GT Eesti Display Trial', sans-serif;
+  background-color: #420076;
+  color: white;
+  border-radius: 8px;
+  padding: 25px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+}
+
+.help-text.show {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .section-birthdate {
+    margin-left: auto; 
+    margin-right: auto;
+    text-align: center; 
+    position: static;
+    top: auto;
+    transform: none;
+  }
+
+  .doodles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, auto);
+    width: 100%;
+    margin: auto;
+    padding: 5px;
+    gap: 3px;
+  }
+
+  .pic {
+    width: 100%; 
+  }
+
+  .help {
+    position: fixed;
+    z-index: 1000;
+  }
+
+  .help-text {
+    left: 10%;
+    top: 50%;
+  }
+
+}
