@@ -46,7 +46,7 @@ songs.forEach(i_song => {
     i_song.style.display = 'none';
 });
 
-const doodleButtons = document.querySelectorAll('#songButton');
+const doodleButtons = document.querySelectorAll('.btn-pic');
 doodleButtons.forEach(doodle => {
     doodle.addEventListener('click', function() {
         const song = this.getAttribute('title');
