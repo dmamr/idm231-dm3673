@@ -37,8 +37,6 @@ function goHome() {
       i_song.style.display = 'none';
   });
 
-
-  this.style.display = 'none';
 }
 
 const songs = document.querySelectorAll('.song');
@@ -75,7 +73,7 @@ doodleButtons.forEach(doodle => {
 
             playSong(song);
 
-            document.getElementById('home-page').style.display = 'inline-block';
+            document.querySelector('.home-btn').style.display = 'inline-block';
         }
     });
 });
@@ -137,7 +135,7 @@ document.getElementById("birthdayForm").addEventListener("submit", function(even
         birthdateSection.style.display = 'none';
         help.style.display = 'none';
 
-        document.getElementById('home-page').style.display = 'inline-block';
+        document.querySelector('.home-btn').style.display = 'inline-block';
     }
   } else {
       console.log("Sorry, no song found for this birthday.");
