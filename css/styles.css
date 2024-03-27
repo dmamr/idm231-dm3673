@@ -10,6 +10,8 @@ html {
   --background: #F5F5DC;
   --text: #FFFFFF;
   background-color: var(--background);
+  overflow: auto;
+  height: 100%;
 }
 
 
@@ -17,17 +19,19 @@ main {
   display: block;
 }
 
-h3 {
-  display: flex;
-  flex-direction: column;
+
+.choose {
+  position: relative;
+  height: 100%;
   font-family: 'GT Eesti Display Trial', sans-serif;
-  color: black;
 }
 
 .section-birthdate {
   position: absolute;
-  margin-left: 250px;
-  top: 32vw;
+  top: 29vw;
+  left: 17vw;
+  width: 75%;
+  height: auto;
 }
 
 .date {
@@ -95,19 +99,24 @@ input[type="date"] {
   border: none;
   display: block;
   position: relative;
+  z-index: 10000;
   cursor: pointer;
-  width: 50%;
-  height: 50%;
 }
 
 .doodles {
-  position: absolute;
+
   display: grid;
   grid-template-columns: repeat(4, 25%);
-  grid-template-rows: repeat(3, 33%);
-  width: 120rem;
-  height: 60rem;
-  gap: 5px;   
+  grid-template-rows: repeat(3, 25%);
+  transition: width 0.5s, height 0.5s; /* Add transition for smoother resizing */
+  overflow: hidden;
+  margin: auto;
+  gap: 4px;
+}
+
+.pic {
+  width: 70%; /* Set image width to 100% of its container */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .song {
@@ -184,13 +193,20 @@ input[type="date"] {
 }
 
 @media screen and (max-width: 767px) {
+  html {
+    --background: #F5F5DC;
+    --text: #FFFFFF;
+    background-color: var(--background);
+    overflow: auto;
+  }
+
   .section-birthdate {
     margin-left: auto; 
     margin-right: auto;
+    margin-top: auto;
     text-align: center; 
     position: static;
-    top: auto;
-    transform: none;
+    transform: translate(0, 25%);
   }
 
   .doodles {
@@ -203,18 +219,29 @@ input[type="date"] {
     gap: 3px;
   }
 
+  .container {
+    padding: 0 20px; /* Add padding as needed */
+  }
+
   .pic {
     width: 100%; 
   }
 
   .help {
-    position: fixed;
+    margin: auto;
     z-index: 1000;
   }
 
   .help-text {
     left: 10%;
     top: 50%;
+  }
+
+  @media screen and (min-width: 768px) {
+    /* Styles for both pages when screen width is greater than or equal to 768px */
+    .song {
+      overflow: auto; /* Set overflow to auto for Page 2 */
+    }
   }
 
 }
